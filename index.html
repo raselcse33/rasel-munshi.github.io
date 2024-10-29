@@ -1,1 +1,191 @@
-<p>hello</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Documentation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .section {
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PHP Documentation</h1>
+
+        <div class="section">
+            <h2>PHP Introduction</h2>
+            <h3>Scripting Language</h3>
+            <p>স্ক্রিপ্টিং ল্যাঙ্গুয়েজে হচ্ছে এক প্রকার প্রোগ্রামিং ল্যাঙ্গুয়েজে যেটা compilation ছাড়াই execute হয়।</p>
+            <p><code>example: php, javascript</code></p>
+
+            <h3>Non-Scripting Languages</h3>
+            <p>নন স্ক্রিপ্টিং ল্যাঙ্গুয়েজে হচ্ছে Compiled ল্যাঙ্গুয়েজে।</p>
+            <p><code>example: c, c++, java</code></p>
+
+            <h3>Compiled</h3>
+            <p>compiled হলো সেই জায়গা যেখানে আমার লেখা কোড টাকে machine language (binary code) convert করা হয়।</p>
+
+            <h3>How Scripting Language Run</h3>
+            <p>যেহেতু স্ক্রিপ্টিং ল্যাঙ্গুয়েজে compiled করার প্রয়োজন পরে না, তাই এটি রান করার জন্য ব্যবহার করা হয় <code>the interpreter</code>.</p>
+
+            <h3>PHP Version Check</h3>
+            <p>PHP ভার্সন চেক করার জন্য ব্যবহার করা হয়: <code>phpversion()</code></p>
+
+            <h3>Web Host</h3>
+            <p>ওয়েব হোস্ট হলো একটা নির্ধারিত জায়গা যেখানে ওয়েবসাইট এর ফাইল রাখা হয়।</p>
+            <p><code>Example: Bluehost, HostGator, GoDaddy.</code></p>
+
+            <h3>Web Server</h3>
+            <p>ওয়েব সার্ভার হলো একটা টুল (tool) or software যেটা আমার ওয়েবসাইট রান করতে এবং ভিসিটরদের দেখতে সাহায্য করে।</p>
+            <p><code>Example: Apache or Nginx server.</code></p>
+
+            <h3>XAMPP</h3>
+            <p>XAMPP হলো একটা সফটওয়্যার প্যাকেজ যা আমার পিসি কে একটা লোকাল ওয়েব সার্ভার বানিয়ে ফেলতে পারে:</p>
+            <ul>
+                <li>X: Cross-platform (works on Windows, Linux, and macOS)</li>
+                <li>A: Apache (a web server that runs your website)</li>
+                <li>M: MySQL (a database that stores your data)</li>
+                <li>P: PHP (a programming language used to build web applications)</li>
+                <li>P: Perl (another programming language, though less commonly used today)</li>
+            </ul>
+
+            <h3>Case Sensitivity</h3>
+            <p>case sensitivity বলতে এইটা বুঝায় যে কোনো একটা লেটার বা ওয়ার্ড uppercase বা lowercase লিখলে এটি কি একই না ভিন্ন।</p>
+            <p><code>Example: Apple, apple</code></p>
+        </div>
+
+        <div class="section">
+            <h2>Variables</h2>
+            <h3>Variable</h3>
+            <p>যেখানে value assign করা থাকে। <code>var_dump()</code> function এর মাধ্যমে আমরা variable টাইপ জানতে পারি.</p>
+
+            <h3>Loosely Typed Language</h3>
+            <p>PHP হল loosely typed language। এর মানে এখানে ভ্যারিয়েবল declured করার সময় বলার প্রয়োজন হয় না।</p>
+            <p><code>Example: $number = 5; $number = "PHP";</code></p>
+
+            <h3>Types of Variable</h3>
+            <ul>
+                <li>String</li>
+                <li>Integer</li>
+                <li>Float (floating point numbers)</li>
+                <li>Boolean</li>
+                <li>Array</li>
+                <li>Object</li>
+                <li>NULL</li>
+                <li>Resource</li>
+            </ul>
+
+            <h3>Variable Scope</h3>
+            <p>Variable scope মানে হচ্ছে variable টাকে কোন কোন জায়গা থেকে access করা যাবে।</p>
+            <h4>Local Scope</h4>
+            <pre>
+                <?php
+                function myFunction() {
+                    $name = "John";  // Local variable
+                    echo $name;
+                }
+
+                myFunction();  // Outputs: John
+                ?>
+            </pre>
+
+            <h4>Global Scope</h4>
+            <pre>
+                <?php
+                $name = "Alice";  // Global variable
+
+                function myFunction() {
+                    echo $name;  // Error
+                }
+
+                myFunction();  // Will produce an error
+                ?>
+            </pre>
+
+            <h4>Static Scope</h4>
+            <pre>
+                <?php
+                function myFunction() {
+                    static $count = 0;  // This is a static variable
+                    $count++;
+                    echo $count;
+                }
+
+                myFunction();  // Outputs: 1
+                myFunction();  // Outputs: 2
+                ?>
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2>Echo/Print</h2>
+            <h3>echo</h3>
+            <p>echo কোনো ভ্যালু রিটার্ন করে না। এটা সিম্পলি আউটপুট শো করে।</p>
+
+            <h3>print</h3>
+            <p>print ভ্যালু ১ রিটার্ন করে।</p>
+            <pre>
+                <?php
+                if (print("Hello")) {
+                    echo " - The print function returned 1.";
+                }
+                ?>
+            </pre>
+
+            <h3>Expressions</h3>
+            <p>Expressions হলো value, variable, operator and function এর একটা combination যেটা একটা রেজাল্ট তৈরী করে।</p>
+            <pre>
+                <?php
+                $x = 5 + 3;  // "5 + 3" is an expression that evaluates to 8 
+                ?>
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2>PHP Data Types</h2>
+            <h3>Data Type</h3>
+            <p>PHP has 8 main data types:</p>
+            <ul>
+                <li>String</li>
+                <li>Integer</li>
+                <li>Float (or Double)</li>
+                <li>Boolean</li>
+                <li>Array</li>
+                <li>Object</li>
+                <li>NULL</li>
+                <li>Resource</li>
+            </ul>
+            <h3>Type Casting</h3>
+            <p>Type Casting হলো একটা process যার মাধ্যমে value একটা data type থেকে আরেকটা data type convert হয়।</p>
+        </div>
+    </div>
+</body>
+</html>
+
