@@ -82,7 +82,7 @@ body {
     
 }
 
-#sidebar li a.active, #sidebar li a:hover {
+#sidebar ul li a.active, #sidebar ul li a:hover {
     background-color: #007bff; /* Change background color on active and hover */
     color: white; /* Change text color */
 }
