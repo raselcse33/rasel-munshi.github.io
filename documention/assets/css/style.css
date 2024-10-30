@@ -1,0 +1,52 @@
+/* Style for the header with the logo and search box */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.logo {
+    height: 40px;
+}
+
+/* Style for the search box */
+#search-box {
+    padding: 8px;
+    width: 300px;
+    font-size: 16px;
+}
+
+/* Sidebar styles */
+#sidebar {
+    width: 250px;
+    float: left;
+    padding: 20px;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin-bottom: 10px;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content area styles */
+#markdown-content {
+    margin-left: 270px;
+    padding: 20px;
+}
