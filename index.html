@@ -5,13 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+    <script src="assets/js/loadMarkdown.js"></script>
 </head>
 <body>
     <!-- Logo and Search Bar -->
-    <header>
-        <img src="assets/images/logo.png" alt="Logo" class="logo">
-        <input type="text" id="search-box" placeholder="Search documentation...">
+     
+    <!-- <header class="" style="display: flex;">
+        <div class="" style="width: 10%;">
+                <img src="assets/images/logo.png" alt="Logo" class="logo-imag">
+            </div>
+        <div class="" style="width: 30%;">
+            <input type="text" id="search-box" placeholder="Search documentation...">
+        </div>
+        <div class="" style="width: 30%;">
+            <input type="text" id="search-box" placeholder="Search documentation...">
+        </div>
+    </header> -->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/images/logo2-1.png" alt="Logo" class="logo-image">
+        </div>
+        <div class="search-section">
+            <input  id="search-box" type="text" placeholder="Search..." class="search-input">
+        </div>
+        <div class="theme-section">
+            <select id="theme-select" class="theme-select">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
     </header>
 
     <!-- Sidebar with links to different sections -->
@@ -30,10 +54,12 @@
         <!-- This is where Markdown content will be rendered -->
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
     <!-- Your custom scripts (such as loadMarkdown.js, search.js) -->
-    <script src="assets/js/loadMarkdown.js"></script>
     <script src="assets/js/search.js"></script>
+    <script>
+
+
+    
+    </script>
 </body>
 </html>
