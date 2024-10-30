@@ -16,17 +16,19 @@ function loadMarkdown(file) {
         .catch(err => console.error('Error loading markdown file:', err));
 }
 
-// Attach event listeners to sidebar links
-document.querySelectorAll('#sidebar ul li a').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();  // Prevent default link behavior
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click event listeners to sidebar links
+    document.querySelectorAll('#sidebar ul li a').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent default link behavior
 
-        // Remove 'active' class from all links and add it to the clicked link
-        document.querySelectorAll('#sidebar ul li a').forEach(a => a.classList.remove('active'));
-        this.classList.add('active');
+            // Remove 'active' class from all links and add it to the clicked link
+            document.querySelectorAll('#sidebar ul li a').forEach(a => a.classList.remove('active'));
+            this.classList.add('active');
 
-        const file = this.getAttribute('href');
-        loadMarkdown(file);  // Load the markdown file dynamically
+            const file = this.getAttribute('data-link');  // Get the file path from data-link
+            loadMarkdown(file);  // Load the markdown file dynamically
+        });
     });
 });
 

@@ -1,8 +1,3 @@
-
----
-
-##### **`markdown/usage.md`**
-```markdown
 # Usage Guide
 
 This section will walk you through how to use the application.
@@ -18,6 +13,3 @@ The dashboard consists of the following sections:
 
 ## Example Commands
 Here are some common commands you will need:
-```bash
-npm run build
-npm run test

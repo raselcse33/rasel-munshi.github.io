@@ -1,8 +1,4 @@
 
----
-
-##### **`markdown/error-handling.md`**
-```markdown
 # Error Handling
 
 In this section, we will explain how to handle common errors you may encounter.

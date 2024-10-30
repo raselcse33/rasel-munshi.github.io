@@ -87,6 +87,10 @@ body {
     color: white; /* Change text color */
 }
 
+.active {
+    font-weight: bold;
+    color: blue;
+}
 /* Main content area styles */
 #markdown-content {
     margin-left: 270px;
